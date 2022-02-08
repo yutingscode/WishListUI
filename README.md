@@ -1,3 +1,3 @@
-# WishListUI
+# How to run the code
+npm start
 
-my project is on master branch

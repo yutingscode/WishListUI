@@ -1,0 +1,39 @@
+<h2>My Wish Lists</h2>
+
+<form [formGroup] = "submissionForm"  class="add-new-wish-products-form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">name</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+    </div>  
+    <div class="form-group">
+        <label for="price" class="col-sm-2 control-label">price</label>
+        <input type="text" class="form-control" id="price" formControlName="price">
+    </div>
+
+    <div class="form-group">
+        <label for="link" class="col-sm-2 control-label">link</label>
+        <input type="text" class="form-control" id="link" formControlName="link">
+    </div>
+    
+    <div class="form-group">
+        <label for="note" class="col-sm-2 control-label">note</label>
+        <input type="text" class="form-control" id="note" formControlName="note">
+    </div>
+    <button mat-flat-button type="submit">Add</button>
+</form>
+
+<div class="productList">
+    <div *ngFor="let product of this.products">
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <div mat-line>
+                    <button mat-flat-button (click) = "deleteAProduct(product._id)">{{product.name}}</button>
+                </div>
+                <div mat-line> {{product.price}} </div>
+                <div mat-line><a href="{{product.link}}">LINK TO {{product.name}}</a></div>
+                <div mat-line> {{product.note}} </div>
+               </mat-list-item>
+          </mat-list>
+    </div>
+</div>
+

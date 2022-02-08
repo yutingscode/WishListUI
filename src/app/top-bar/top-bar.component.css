@@ -1,0 +1,21 @@
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.mat-toolbar {
+    background-color:hotpink;
+    margin-left: 10px;
+}
+
+.mat-flat-button {
+    background-color: white;
+    margin-left: 10px;
+}
+
+.buttons {
+    margin-left: 100px;
+}
